@@ -1,6 +1,7 @@
 //standard library --helps to take user input
 use std::io;
-
+//
+use rand::Rng;
 
 fn main(){
 
@@ -20,6 +21,12 @@ fn main(){
     io::stdin()
     .read_line(&mut city_name)
     .expect("Failed to read line");
-
     println!("{} {} {}", first_name, last_name, city_name);
+
+    println!("Generating Lottery Ticket: ");
+
+    // 
+    let random_number = rand::thread_rng().gen_range(0..=100);
+    println!("Your Lottery Number is {random_number}");
+
 }
