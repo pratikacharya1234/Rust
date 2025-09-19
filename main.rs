@@ -1,32 +1,33 @@
-//standard library --helps to take user input
 use std::io;
-//
 use rand::Rng;
 
+
 fn main(){
+    let correct_number = rand::thread_rng().gen_range(0..=100);
 
-    //Print hello world
-    println!("Hello, world!");
+    print!("Enter Your Guessing Number: ");
 
-    //variables
-    let  first_name = "Pratik";
-    let  last_name = "Acharya";
+    let mut guessing = String::new();
 
-    
-    
-    // assign variables using mut
-    println!("Enter Your City: ");
-    let mut city_name = String::new();
-    
     io::stdin()
-    .read_line(&mut city_name)
-    .expect("Failed to read line");
-    println!("{} {} {}", first_name, last_name, city_name);
+    .read_line(&mut guessing)
+    .expect("Error while taking input.");
 
-    println!("Generating Lottery Ticket: ");
+    println!("Lets Check Your Guessing");
 
-    // 
-    let random_number = rand::thread_rng().gen_range(0..=100);
-    println!("Your Lottery Number is {random_number}");
+    let guessing: u32 = guessing.trim().parse().expect("Please enter a valid number!");
 
+    if guessing == correct_number{
+        println!("Your Guess is Correct {guessing}.");
+    }
+
+    else if guessing > correct_number {
+        println!("Your Guess is Too High {guessing}.");
+    }
+    
+    else if guessing < correct_number{
+        println!("Your Guess is Too Low {guessing}.");
+    }
+
+    
 }
