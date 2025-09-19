@@ -1,3 +1,6 @@
+// Lottery Number Generator
+// A Rust program that generates random lottery numbers
+
 //standard library --helps to take user input
 use std::io;
 //
