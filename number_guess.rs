@@ -1,3 +1,6 @@
+// Number Guessing Game
+// A simple Rust program for learning basic concepts
+
 use std::io;
 use rand::Rng;
 
@@ -24,7 +27,7 @@ fn main(){
     else if guessing > correct_number {
         println!("Your Guess is Too High {guessing}.");
     }
-    
+
     else if guessing < correct_number{
         println!("Your Guess is Too Low {guessing}.");
     }
