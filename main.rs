@@ -1,9 +1,12 @@
 fn main(){
+
+    //Print hello world
     println!("Hello, world!");
 
-    let mut firstName = "Pratik";
-    let mut lastName = "Acharya";
+    //variables
+    let  first_name = "Pratik";
+    let  last_name = "Acharya";
 
-    println!("{} {}", firstName, lastName);
+    println!("{} {}", first_name, last_name);
 
 }
